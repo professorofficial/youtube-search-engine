@@ -9,8 +9,10 @@
 <body>
   <div class="container">
     <h1>YouTube Search Engine</h1>
-    <input type="text" id="searchInput" placeholder="Enter search query">
-    <button onclick="searchVideos()">Search</button>
+    <form id="searchForm" onsubmit="event.preventDefault(); searchVideos()">
+      <input type="text" id="searchInput" placeholder="Enter search query">
+      <button type="submit">Search</button>
+    </form>
     <div id="searchResults"></div>
   </div>
   <script src="script.js"></script>
