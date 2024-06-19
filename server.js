@@ -24,7 +24,7 @@ app.get('/search', async (req, res) => {
     const searchResults = await youtube.search.list({
       part: 'snippet',
       q: query,
-      maxResults: 10
+      maxResults: 100
     });
 
     res.json(searchResults.data);
